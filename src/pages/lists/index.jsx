@@ -1,3 +1,3 @@
-export default function Messages() {
-  return <div>Messages component</div>;
+export default function Lists() {
+  return <div>Lists component</div>;
 }

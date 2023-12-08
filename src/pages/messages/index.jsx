@@ -1,3 +1,3 @@
-export default function Explore() {
-  return <div>Explore component</div>;
+export default function Messages() {
+  return <div>Messages component</div>;
 }
