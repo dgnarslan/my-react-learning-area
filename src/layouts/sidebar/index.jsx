@@ -7,7 +7,9 @@ export default function Sidebar() {
   const account = useAccount();
   return (
     <aside
-      className={'w-[275px] max-h-screen min-h-screen px-2 flex flex-col'}
+      className={
+        'w-[275px] max-h-screen min-h-screen px-2 flex flex-col sticky top-0'
+      }
       key={account.id}
     >
       <Logo />

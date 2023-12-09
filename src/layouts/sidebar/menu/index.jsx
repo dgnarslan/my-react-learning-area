@@ -40,7 +40,7 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
-      {({ close }) => <More close={close} />}
+      <More close={close} />
       <New />
     </nav>
   );

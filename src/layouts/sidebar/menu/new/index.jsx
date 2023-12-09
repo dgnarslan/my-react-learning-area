@@ -1,4 +1,4 @@
-import Button from '~/ components/button/index.jsx';
+import Button from '~/components/button/index.jsx';
 
 export default function New() {
   return (

@@ -9,7 +9,7 @@ export default function Account() {
       <Popover className={'relative'}>
         <Popover.Button
           className={
-            'my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-start items-center outline-none'
+            'my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-start items-center outline-none transition-colors'
           }
         >
           <img
@@ -45,7 +45,7 @@ export default function Account() {
               'absolute bottom-[80px] w-[300px] py-3 z-[1] left-1/2 -translate-x-1/2 -translate-y-2 bg-black shadow-box rounded-2xl'
             }
           >
-            <More />
+            {({ close }) => <More close={close} />}
           </Popover.Panel>
         </Transition>
       </Popover>
