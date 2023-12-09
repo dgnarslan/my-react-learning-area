@@ -3,12 +3,18 @@ import classNames from 'classnames';
 import { mainMenu } from '~/utilts/consts.jsx';
 import More from '~/layouts/sidebar/menu/more/index.jsx';
 import New from '~/layouts/sidebar/menu/new/index.jsx';
+import { useAccount } from '~/store/auth/hooks.js';
 
 export default function Menu() {
+  const account = useAccount();
   return (
-    <nav className={'mt-0.5 mb-1'}>
+    <nav className={'mt-0.5 mb-1'} key={account}>
       {mainMenu.map((menu, index) => (
-        <NavLink to={menu.path} className={'py-[3px] block group'} key={index}>
+        <NavLink
+          to={typeof menu.path === 'function' ? menu.path() : menu.path}
+          key={index}
+          className={'py-[3px] block group'}
+        >
           {({ isActive }) => (
             <div
               className={classNames(
@@ -34,7 +40,7 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
-      <More />
+      {({ close }) => <More close={close} />}
       <New />
     </nav>
   );

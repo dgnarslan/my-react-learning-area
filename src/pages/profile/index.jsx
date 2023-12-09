@@ -1,3 +1,6 @@
+import { useParams } from 'react-router-dom';
+
 export default function Profile() {
-  return <div>Profile component</div>;
+  const { slug } = useParams();
+  return <div>Profile component - {slug}</div>;
 }
