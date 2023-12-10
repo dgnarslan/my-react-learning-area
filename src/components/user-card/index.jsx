@@ -13,14 +13,12 @@ export default function UserCard({ user }) {
         alt={'Avatar'}
       />
       <div className={'flex-1 max-w-full flex flex-col text-start'}>
-        <div
-          className={
-            'text-[15px] text-[#e7e9ea] font-bold leading-5 flex items-center'
-          }
-        >
+        <div className={'text-[15px] font-bold leading-5 flex items-center'}>
           {user.fullName}
         </div>
-        <div className={'text-[15px] text-[#71767b]'}>@{user.username}</div>
+        <div className={'text-[15px] text-[color:var(--color-baseSecondary)]'}>
+          @{user.username}
+        </div>
       </div>
       <div>
         {following ? (

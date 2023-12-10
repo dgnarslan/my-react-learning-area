@@ -30,12 +30,14 @@ export default function More({ close }) {
           />
           <div className={'mx-3 flex-1 text-[15px] text-start   '}>
             <h6 className={'font-bold leading-5'}>{account.fullName}</h6>
-            <div className={'text-[#71767b]'}>@{account.username}</div>
+            <div className={'text-[color:var(--color-baseSecondary)]'}>
+              @{account.username}
+            </div>
           </div>
           {currentAccount.id === account.id && (
             <svg
               viewBox="0 0 24 24"
-              fill="#00ba7c"
+              fill="currentColor"
               width={18.75}
               height={18.75}
               className={'mr-2 ml-3'}
@@ -48,21 +50,21 @@ export default function More({ close }) {
       <div className={'h-px bg-[#2f3336] my-3'} />
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold text-[#e7e9ea] leading-5'
+          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         Var olan bir hesap ekle
       </button>
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold text-[#e7e9ea] leading-5'
+          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         Hesapları yönet
       </button>
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold text-[#e7e9ea] leading-5'
+          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         <div className={'max-w-[228px]'}>
