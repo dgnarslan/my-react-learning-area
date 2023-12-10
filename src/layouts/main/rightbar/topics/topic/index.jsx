@@ -33,7 +33,7 @@ export default function Topic({ item }) {
         </Popover.Button>
         <Popover.Panel
           className={
-            'w-[384px] absolute top-2 right-0 bg-black px-4 shadow-box rounded-xl grid z-[1] overflow-hidden'
+            'w-[384px] absolute top-2 right-0 bg-black shadow-box rounded-xl grid z-[1] overflow-hidden'
           }
         >
           <button
