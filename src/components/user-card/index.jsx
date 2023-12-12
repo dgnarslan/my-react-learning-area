@@ -16,7 +16,7 @@ export default function UserCard({ user }) {
         <div className={'text-[15px] font-bold leading-5 flex items-center'}>
           {user.fullName}
         </div>
-        <div className={'text-[15px] text-[color:var(--color-baseSecondary)]'}>
+        <div className={'text-[15px]  text-[color:var(--color-baseSecondary)]'}>
           @{user.username}
         </div>
       </div>
@@ -36,6 +36,7 @@ export default function UserCard({ user }) {
             size="small"
             variant="white"
             onClick={() => setFollowing(true)}
+            className={'text-[#000]'}
           >
             Takip et
           </Button>

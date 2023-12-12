@@ -22,6 +22,10 @@ export default function MainLayout() {
       '--background-third',
       appearance.backgroundColor.third,
     );
+    document.documentElement.style.setProperty(
+      '--background-modal',
+      appearance.backgroundColor.modal,
+    );
 
     document.documentElement.style.setProperty(
       '--color-primary',
@@ -43,6 +47,10 @@ export default function MainLayout() {
     document.documentElement.style.setProperty(
       '--font-size',
       appearance.fontSize + 'px',
+    );
+    document.documentElement.style.setProperty(
+      '--box-shadow',
+      appearance.boxShadow,
     );
 
     console.log(appearance);

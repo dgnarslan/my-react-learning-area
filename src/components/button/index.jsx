@@ -23,7 +23,7 @@ export default function Button({
           'px-4 h-[52px] w-full text-[17px]': size === 'large',
           'bg-[color:var(--color-primary)] hover:bg-[#1a8cd8] text-white':
             variant === 'primary',
-          'bg-[#eff3f4] text-[color:var(--background-primary)] hover:bg-[#d7dbdc]':
+          'bg-[#eff3f4] text-[color:var(--color-baseSecond)] hover:bg-[#d7dbdc]':
             variant === 'white',
           'border border-[#536471] hover:border-[#67070f] hover:bg-[#f4212e1a] hover:text-[#f4212e]':
             variant === 'white-outline',
