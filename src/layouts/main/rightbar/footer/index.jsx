@@ -75,7 +75,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Hakkında
@@ -83,7 +83,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Durum
@@ -91,7 +91,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               İşletmeler için X
@@ -99,7 +99,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Geliştiriciler

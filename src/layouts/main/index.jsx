@@ -52,8 +52,6 @@ export default function MainLayout() {
       '--box-shadow',
       appearance.boxShadow,
     );
-
-    console.log(appearance);
   }, [appearance]);
   return (
     <div className={'w-[1265px] mx-auto flex'}>

@@ -9,7 +9,7 @@ export default function Account() {
       <Popover className={'relative'}>
         <Popover.Button
           className={
-            'my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-start items-center outline-none transition-colors'
+            'my-3 p-3 rounded-full hover:bg-[color:var(--background-secondary)] w-full flex text-start items-center outline-none transition-colors'
           }
         >
           <img

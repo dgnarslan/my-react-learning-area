@@ -5,7 +5,9 @@ export default function UserCard({ user }) {
   const [following, setFollowing] = useState(false);
   return (
     <div
-      className={'py-3 px-4 flex gap-3 transition-colors hover:bg-white/[0.03]'}
+      className={
+        'py-3 px-4 flex gap-3 transition-colors hover:bg-[color:var(--background-third)]'
+      }
     >
       <img
         src={user.avatar}

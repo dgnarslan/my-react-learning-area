@@ -16,14 +16,14 @@ export default function Button({
     {
       type: 'button',
       className: classNames(
-        'rounded-full flex items-center font-bold transition-colors justify-center',
+        'rounded-full flex items-center font-bold transition-all justify-center',
         {
           'px-4 h-8 text-sm': size === 'small',
           'px-4 h-9': size === 'normal',
           'px-4 h-[52px] w-full text-[17px]': size === 'large',
-          'bg-[color:var(--color-primary)] hover:bg-[#1a8cd8] text-white':
+          'bg-[color:var(--color-primary)] hover:opacity-90 text-white':
             variant === 'primary',
-          'bg-[#eff3f4] text-[color:var(--color-baseSecond)] hover:bg-[#d7dbdc]':
+          'bg-[color:var(--color-base)] text-[color:var(--background-primary)]':
             variant === 'white',
           'border border-[#536471] hover:border-[#67070f] hover:bg-[#f4212e1a] hover:text-[#f4212e]':
             variant === 'white-outline',

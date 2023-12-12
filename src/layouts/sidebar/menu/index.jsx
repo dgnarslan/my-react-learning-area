@@ -26,7 +26,7 @@ export default function Menu() {
                 {menu?.notification && (
                   <span
                     className={
-                      'w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] text-[color:var(--background-primary)] border border-[color:var(--background-primary] absolute -right-1 -top-1.5 flex items-center justify-center text-[11px]'
+                      'w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] text-white border border-[color:var(--background-primary] absolute -right-1 -top-1.5 flex items-center justify-center text-[11px]'
                     }
                   >
                     {menu?.notification}

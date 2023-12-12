@@ -5,7 +5,9 @@ export default function Topic({ item }) {
   return (
     <Link
       to={'/'}
-      className={'py-3 px-4 transition-colors hover:bg-white/[0.03] relative'}
+      className={
+        'py-3 px-4 transition-colors hover:bg-[color:var(--background-third)] relative'
+      }
     >
       <div
         className={
@@ -30,8 +32,7 @@ export default function Topic({ item }) {
       <Popover className={'absolute top-1.5 right-2'}>
         <Popover.Button
           className={
-            'w-[34.75px] h-[34.75px] text-[color:var(--color-baseSecondary)] rounded-full  flex items-center justify-center transition-colors' +
-            ' hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] outline-none'
+            'outline-none w-[34.75px] h-[34.75px] rounded-full text-[color:var(--color-base-secondary)] flex items-center justify-center hover:text-[color:var(--color-primary)] transition-colors relative before:absolute before:inset-0 before:rounded-full hover:before:hover:bg-[color:var(--color-primary)] before:transition-all before:z-[-1] before:opacity-[.15] z-[1]'
           }
         >
           <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
@@ -49,7 +50,7 @@ export default function Topic({ item }) {
           <button
             type={'button'}
             className={
-              'py-3 px-4 flex items-center hover:bg-white/[0.05] transition-colors text-start gap-3 text-[15px] font-bold leading-5'
+              'py-3 px-4 flex items-center hover:bg-[color:var(--background-secondary)] transition-colors text-start gap-3 text-[15px] font-bold leading-5'
             }
           >
             <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
@@ -63,7 +64,7 @@ export default function Topic({ item }) {
           <button
             type={'button'}
             className={
-              'py-3  px-4 flex items-center hover:bg-white/[0.05] transition-colors gap-3 text-start text-[15px] font-bold leading-5'
+              'py-3  px-4 flex items-center hover:bg-[color:var(--background-secondary)] transition-colors gap-3 text-start text-[15px] font-bold leading-5'
             }
           >
             <svg viewBox="0 0 24 24" width={18.75} height={18.75}>

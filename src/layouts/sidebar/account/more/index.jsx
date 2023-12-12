@@ -19,7 +19,8 @@ export default function More({ close }) {
           className={classNames(
             'py-3 px-4 flex items-center w-full transition-colors ',
             {
-              'hover:bg-[#eff3f41a]': currentAccount.id !== account.id,
+              'hover:bg-[color:var(--background-secondary)]':
+                currentAccount.id !== account.id,
             },
           )}
         >
@@ -50,21 +51,21 @@ export default function More({ close }) {
       <div className={'h-px bg-[#2f3336] my-3'} />
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
+          'py-3 px-4 text-start hover:bg-[color:var(--background-secondary)] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         Var olan bir hesap ekle
       </button>
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
+          'py-3 px-4 text-start hover:bg-[color:var(--background-secondary)] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         Hesapları yönet
       </button>
       <button
         className={
-          'py-3 px-4 text-start hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-5'
+          'py-3 px-4 text-start hover:bg-[color:var(--background-secondary)] transition-colors w-full text-[15px] font-bold leading-5'
         }
       >
         <div className={'max-w-[228px]'}>
