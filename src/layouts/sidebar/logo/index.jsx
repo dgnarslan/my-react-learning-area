@@ -5,7 +5,7 @@ export default function Logo() {
       <Link
         to={'/'}
         className={
-          'w-[52px] h-[52px] rounded-full flex text-[color:var(--color-base)] items-center justify-center hover:bg-[color:var(--background-third)] transition-colors'
+          'w-[3.25rem] h-[3.25rem] rounded-full flex text-[color:var(--color-base)] items-center justify-center hover:bg-[color:var(--background-third)] transition-colors'
         }
       >
         <svg viewBox="0 0 24 24" width={30} className="h-[1.875rem]">

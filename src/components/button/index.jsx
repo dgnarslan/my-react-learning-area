@@ -20,7 +20,7 @@ export default function Button({
         {
           'px-4 h-8 text-sm': size === 'small',
           'px-4 h-9': size === 'normal',
-          'px-4 h-[52px] w-full text-[17px]': size === 'large',
+          'px-4 h-[3.25rem] w-full text-[1.063rem]': size === 'large',
           'bg-[color:var(--color-primary)] hover:opacity-90 text-white':
             variant === 'primary',
           'bg-[color:var(--color-base)] text-[color:var(--background-primary)]':

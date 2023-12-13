@@ -3,11 +3,11 @@ import { Popover } from '@headlessui/react';
 
 export default function Footer() {
   return (
-    <footer className={'mb-4 px-4 flex flex-wrap gap-2'}>
+    <footer className={'mb-4 px-4 flex flex-wrap gap-2 text-[0.813rem]'}>
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Hizmet Şartları
@@ -15,7 +15,7 @@ export default function Footer() {
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Gizlilik Politiskası
@@ -23,7 +23,7 @@ export default function Footer() {
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Çerez Politikası
@@ -31,7 +31,7 @@ export default function Footer() {
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Imprint
@@ -39,7 +39,7 @@ export default function Footer() {
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Erişilebilirlik
@@ -47,16 +47,16 @@ export default function Footer() {
       <Link
         to={'/'}
         className={
-          'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline'
+          'text-[color:var(--color-baseSecondary)] leading-4 hover:underline'
         }
       >
         Reklam Bilgisi
       </Link>
-      <div className={'w-full flex gap-2'}>
+      <div className={'inline-flex gap-2 flex-wrap'}>
         <Popover className={'relative leading-4 inline-flex'}>
           <Popover.Button
             className={
-              'text-[color:var(--color-baseSecondary)] leading-4 text-[13px] hover:underline outline-none inline-flex items-center'
+              'text-[color:var(--color-baseSecondary)] leading-4 hover:underline outline-none inline-flex items-center'
             }
           >
             Daha fazla
@@ -69,13 +69,13 @@ export default function Footer() {
           </Popover.Button>
           <Popover.Panel
             className={
-              'w-[150px] max-w-[384px] bg-[color:var(--background-primary)] shadow-box absolute bottom-0 right-0 rounded-xl grid overflow-hidden'
+              'w-[9.375rem] max-w-[24rem] bg-[color:var(--background-primary)] shadow-box absolute bottom-0 right-0 rounded-xl grid overflow-hidden'
             }
           >
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Hakkında
@@ -83,7 +83,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Durum
@@ -91,7 +91,7 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               İşletmeler için X
@@ -99,18 +99,14 @@ export default function Footer() {
             <Link
               to={'/'}
               className={
-                'py-3 px-4 text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
+                'py-3 px-4 leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors'
               }
             >
               Geliştiriciler
             </Link>
           </Popover.Panel>
         </Popover>
-        <p
-          className={
-            'text-[color:var(--color-baseSecondary)] leading-4 text-[13px]'
-          }
-        >
+        <p className={'text-[color:var(--color-baseSecondary)] leading-4'}>
           &copy; 2023 X Corp. / PROTOTURK
         </p>
       </div>

@@ -5,23 +5,38 @@ import {
   setBackgroundColor,
   setBoxShadow,
   setColor,
+  setFontSize,
 } from '~/store/appearance/actions.js';
 import Button from '~/components/button/index.jsx';
-import { colors } from '~/utilts/consts.jsx';
+import { colors, fontSizes } from '~/utilts/consts.jsx';
+import { useEffect, useState } from 'react';
 
 export default function AppearanceModal({ close }) {
-  const { backgroundColor, color } = useAppearance();
+  const { backgroundColor, color, fontSize } = useAppearance();
+  const [fontSizePercent, setFontSizePercent] = useState(0);
+
+  useEffect(() => {
+    setTimeout(
+      () =>
+        setFontSizePercent(
+          document.querySelector('.active-font-size').offsetLeft + 3,
+        ),
+      1,
+    );
+  }, [fontSize]);
   return (
     <div className={'w-[600px]'}>
       <h3
-        className={'mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center'}
+        className={
+          'mt-8 mb-3 text-[1.438rem] leading-7 font-extrabold text-center'
+        }
       >
         Görünümü özelleştir
       </h3>
       <div className={'p-8 pt-0'}>
         <p
           className={
-            'text-center text-[color:var(--color-baseSecondary)] text-[15px] leading-5 mb-5'
+            'text-center text-[color:var(--color-baseSecondary)] text-[0.938rem] leading-5 mb-5'
           }
         >
           Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
@@ -39,9 +54,7 @@ export default function AppearanceModal({ close }) {
             className={'w-10 h-10 rounded-full object-cover'}
           />
           <div className={'flex-1 flex flex-col'}>
-            <header
-              className={'mb-0.5 leading-5 text-[15px] flex items-center'}
-            >
+            <header className={'mb-0.5 leading-5 flex items-center'}>
               <div className={'font-bold flex items-center'}>
                 X
                 <svg
@@ -63,9 +76,7 @@ export default function AppearanceModal({ close }) {
                 @X - 31d
               </div>
             </header>
-            <div
-              className={'text-[15px] leading-5 text-[color:var(--color-base)]'}
-            >
+            <div className={'leading-5 text-[color:var(--color-base)]'}>
               X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
               yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
               etiketler ve{' '}
@@ -91,13 +102,49 @@ export default function AppearanceModal({ close }) {
                 'bg-[color:var(--background-secondary)] p-4 rounded-2xl flex items-center gap-5 '
               }
             >
-              <div className={'text-[13px]'}>Aa</div>
+              <div className={'text-[0.813rem]'}>Aa</div>
               <div
                 className={
-                  'h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full'
+                  'h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full relative'
                 }
-              ></div>
-              <div className={'text-5'}>Aa</div>
+              >
+                <div
+                  style={{ width: fontSizePercent }}
+                  className={
+                    'absolute h-full top-0 left-0 rounded-full bg-[color:var(--color-primary)]'
+                  }
+                />
+                <div
+                  className={
+                    'flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]'
+                  }
+                >
+                  {fontSizes.map((fs, index) => (
+                    <button
+                      key={index}
+                      type={'button'}
+                      onClick={() => setFontSize(fs)}
+                      className={classNames(
+                        'w-8 h-8 rounded-full flex items-center justify-center relative before:absolute before:inset-0 before:rounded-full before:hover:bg-[color:var(--color-primary)] before:opacity-10',
+                        {
+                          'active-font-size': fs === fontSize,
+                        },
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          'w-3 h-3 rounded-full bg-[color:var(--color-secondary)]',
+                          {
+                            'w-4 h-4': fs === fontSize,
+                            '!bg-[color:var(--color-primary)]': fs <= fontSize,
+                          },
+                        )}
+                      ></div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className={'text-[1.25rem]'}>Aa</div>
             </div>
           </section>
           <section>
@@ -124,7 +171,7 @@ export default function AppearanceModal({ close }) {
                   key={index}
                   style={{ '--bg': c.primary }}
                   className={
-                    'w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center'
+                    'w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center'
                   }
                 >
                   {color.primary === c.primary && (
@@ -172,7 +219,7 @@ export default function AppearanceModal({ close }) {
                     );
                   }}
                   className={classNames(
-                    'h-16 pr-3 pl-2  bg-white font-bold text-[#0f1419] rounded border border-white/10 group flex items-center gap-1.5',
+                    'h-[62px] pr-3 pl-2  bg-white font-bold text-[#0f1419] rounded border border-white/10 group flex items-center gap-1.5',
                     {
                       '!border-[color:var(--color-primary)] border-2':
                         backgroundColor.name === 'light',
@@ -181,12 +228,12 @@ export default function AppearanceModal({ close }) {
                 >
                   <div
                     className={
-                      'w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center group-hover:bg-black/5'
+                      'w-[40px] h-[40px] rounded-full flex-shrink-0 flex items-center justify-center group-hover:bg-black/5'
                     }
                   >
                     <div
                       className={classNames(
-                        'w-5 h-5 rounded-full border-2 border-[#b9cad3] flex items-center justify-center ',
+                        'w-[20px] h-[20px] rounded-full border-[2px] border-[#b9cad3] flex items-center justify-center ',
                         {
                           '!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white ':
                             backgroundColor.name === 'light',
@@ -203,7 +250,7 @@ export default function AppearanceModal({ close }) {
                       )}
                     </div>
                   </div>
-                  Varsayılan
+                  <div className={'truncate'}>Varsayılan</div>
                 </button>
                 <button
                   onClick={() => {
@@ -224,7 +271,7 @@ export default function AppearanceModal({ close }) {
                     );
                   }}
                   className={classNames(
-                    'h-16 pr-3 pl-2  bg-[#15202b] font-bold text-[#f7f9f9] rounded border border-white/10 group flex items-center gap-1.5',
+                    'h-[62px] pr-3 pl-2  bg-[#15202b] font-bold text-[#f7f9f9] rounded border border-white/10 group flex items-center gap-1.5',
                     {
                       '!border-[color:var(--color-primary)] border-2':
                         backgroundColor.name === 'dark',
@@ -233,12 +280,12 @@ export default function AppearanceModal({ close }) {
                 >
                   <div
                     className={
-                      'w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center'
+                      'w-[40px] h-[40ox] rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center'
                     }
                   >
                     <div
                       className={classNames(
-                        'w-5 h-5 rounded-full border-2 border-[#5c6e7e] flex items-center justify-center',
+                        'w-[20px] h-[20px] rounded-full border-[2px] border-[#5c6e7e] flex items-center justify-center',
                         {
                           '!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white ':
                             backgroundColor.name === 'dark',
@@ -255,7 +302,7 @@ export default function AppearanceModal({ close }) {
                       )}
                     </div>
                   </div>
-                  Loş
+                  <div className={'truncate'}>Loş</div>
                 </button>
                 <button
                   onClick={() => {
@@ -276,7 +323,7 @@ export default function AppearanceModal({ close }) {
                     );
                   }}
                   className={classNames(
-                    'h-16 pr-3 pl-2 bg-[#000] font-bold text-[#fff] rounded border border-white/10 group flex items-center gap-1.5',
+                    'h-[62px] pr-3 pl-2 bg-[#000] font-bold text-[#fff] rounded border border-white/10 group flex items-center gap-1.5',
                     {
                       '!border-[color:var(--color-primary)] border-2':
                         backgroundColor.name === 'darker',
@@ -285,12 +332,12 @@ export default function AppearanceModal({ close }) {
                 >
                   <div
                     className={
-                      'w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center'
+                      'w-[40px] h-[40px] rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center'
                     }
                   >
                     <div
                       className={classNames(
-                        'w-5 h-5 rounded-full border-2 border-[#3e4144] flex items-center justify-center',
+                        'w-[20px] h-[20px] rounded-full border-[2px] border-[#3e4144] flex items-center justify-center',
                         {
                           '!border-[color:var(--color-primary)] !bg-[color:var(--color-primary)] text-white ':
                             backgroundColor.name === 'darker',
@@ -307,14 +354,14 @@ export default function AppearanceModal({ close }) {
                       )}
                     </div>
                   </div>
-                  Işıklar kapalı
+                  <div className={'truncate'}>Işıklar kapalı</div>
                 </button>
               </div>
             </div>
           </section>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center pt-4">
           <Button onClick={close}>Bitti</Button>
         </div>
       </div>

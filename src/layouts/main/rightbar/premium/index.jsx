@@ -8,7 +8,7 @@ export default function Premium() {
       }
     >
       <h6 className={'text-xl leading-6 font-extrabold'}>Premium'a Abone Ol</h6>
-      <p className={'leading-5 text-[15px] font-bold'}>
+      <p className={'leading-5 font-bold'}>
         Yeni özellikleri açmak için abone ol ve uygun olman durumunda reklam
         geliri payı kazan.
       </p>

@@ -13,7 +13,7 @@ export default function Menu() {
         <NavLink
           to={typeof menu.path === 'function' ? menu.path() : menu.path}
           key={index}
-          className={'py-[3px] block group'}
+          className={'py-[0.188rem] block group'}
         >
           {({ isActive }) => (
             <div
@@ -22,11 +22,11 @@ export default function Menu() {
                 { 'font-bold': isActive },
               )}
             >
-              <div className={'w-[26.25px] h-[26.25px] relative'}>
+              <div className={'w-[1.641rem] h-[1.641rem] relative'}>
                 {menu?.notification && (
                   <span
                     className={
-                      'w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] text-white border border-[color:var(--background-primary] absolute -right-1 -top-1.5 flex items-center justify-center text-[11px]'
+                      'w-[1.125rem] h-[1.125rem] rounded-full bg-[color:var(--color-primary)] text-white border border-[color:var(--background-primary] absolute -right-1 -top-1.5 flex items-center justify-center text-[0.688rem]'
                     }
                   >
                     {menu?.notification}
