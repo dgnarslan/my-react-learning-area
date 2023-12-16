@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   backgroundColor: {
     name: 'darker',
-    primary: '#000',
+    primary: '#000000',
     secondary: '#16181c',
     third: '#273340',
     modal: '#5b708366',

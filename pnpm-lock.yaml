@@ -32,6 +32,9 @@ dependencies:
   react-use:
     specifier: ^17.4.2
     version: 17.4.2(react-dom@18.2.0)(react@18.2.0)
+  virtua:
+    specifier: ^0.17.6
+    version: 0.17.6(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/react':
@@ -3000,6 +3003,16 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
+
+  /virtua@0.17.6(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-tJqLi1kpGdWu8sBVRjqfMnums3NQYtfMOYr2n1vnOwXuUWKozHS20RzWfiQGfB5ylM4typkvUs2w7uzkPC1y3A==}
+    peerDependencies:
+      react: '>=16.14.0'
+      react-dom: '>=16.14.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /vite@5.0.6:
     resolution: {integrity: sha512-MD3joyAEBtV7QZPl2JVVUai6zHms3YOmLR+BpMzLlX2Yzjfcc4gTgNi09d/Rua3F4EtC8zdwPU8eQYyib4vVMQ==}
