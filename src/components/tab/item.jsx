@@ -18,7 +18,7 @@ export default function Item({ children, id }) {
           'h-[3.313rem] relative inline-flex items-center',
           {
             'font-bold': active === id,
-            'text-[color:var(--color-base-secondary)] font-medium':
+            'text-[color:var(--color-baseSecondary)] font-medium':
               active !== id,
           },
         )}
