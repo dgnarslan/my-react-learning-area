@@ -8,7 +8,7 @@ import {
   setFontSize,
 } from '~/store/appearance/actions.js';
 import Button from '~/components/button/index.jsx';
-import { colors, fontSizes } from '~/utilts/consts.jsx';
+import { colors, fontSizes } from '~/utils/consts.jsx';
 import { useEffect, useState } from 'react';
 
 export default function AppearanceModal({ close }) {

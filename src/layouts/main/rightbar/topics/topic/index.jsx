@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { numberFormat } from '~/utilts/formats.js';
+import { numberFormat } from '~/utils/formats.js';
 import { Popover } from '@headlessui/react';
 export default function Topic({ item }) {
   return (

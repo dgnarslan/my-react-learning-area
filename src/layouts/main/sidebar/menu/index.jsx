@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
-import { mainMenu } from '~/utilts/consts.jsx';
-import More from '~/layouts/sidebar/menu/more/index.jsx';
-import New from '~/layouts/sidebar/menu/new/index.jsx';
+import { mainMenu } from '~/utils/consts.jsx';
+import More from '~/layouts/main/sidebar/menu/more/index.jsx';
+import New from '~/layouts/main/sidebar/menu/new/index.jsx';
 import { useAccount } from '~/store/auth/hooks.js';
 
 export default function Menu() {

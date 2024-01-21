@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Sidebar from '~/layouts/sidebar/index.jsx';
+import Sidebar from '~/layouts/main/sidebar/index.jsx';
 import RightBar from '~/layouts/main/rightbar/index.jsx';
 import { useModal } from '~/store/modal/hooks.js';
 import Modal from '~/modals/index.jsx';

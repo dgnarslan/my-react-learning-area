@@ -1,4 +1,4 @@
-import { numberFormat } from '~/utilts/formats.js';
+import { numberFormat } from '~/utils/formats.js';
 import Photo from '~/components/photo/index.jsx';
 import Poll from '~/components/poll/index.jsx';
 export default function Post({ post }) {

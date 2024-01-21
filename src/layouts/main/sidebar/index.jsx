@@ -1,6 +1,6 @@
-import Logo from '~/layouts/sidebar/logo/index.jsx';
-import Menu from '~/layouts/sidebar/menu/index.jsx';
-import Account from '~/layouts/sidebar/account/index.jsx';
+import Logo from '~/layouts/main/sidebar/logo/index.jsx';
+import Menu from '~/layouts/main/sidebar/menu/index.jsx';
+import Account from '~/layouts/main/sidebar/account/index.jsx';
 import { useAccount } from '~/store/auth/hooks.js';
 
 export default function Sidebar() {
